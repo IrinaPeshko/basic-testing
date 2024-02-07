@@ -1,5 +1,5 @@
 // Uncomment the code below and write your tests
-import {  simpleCalculator, Action } from './index';
+import { simpleCalculator, Action } from './index';
 
 const testCases = [
   { a: 1, b: 2, action: Action.Add, expected: 3 },
@@ -17,19 +17,19 @@ const testCases = [
   { a: 2, b: 3, action: Action.Exponentiate, expected: 8 },
   { a: 3, b: 2, action: Action.Exponentiate, expected: 9 },
   { a: 4, b: 2, action: Action.Exponentiate, expected: 16 },
-  { a: 3, b: 2, action: "invalidAction", expected: null },
+  { a: 3, b: 2, action: 'invalidAction', expected: null },
   { a: 5, b: 3, action: 'invalidAction', expected: null },
   { a: 10, b: 2, action: 'invalidAction', expected: null },
-  { a: 3, b: "invalidNumber", action: Action.Add, expected: null },
+  { a: 3, b: 'invalidNumber', action: Action.Add, expected: null },
   { a: 5, b: '3', action: Action.Subtract, expected: null },
   { a: null, b: 2, action: Action.Multiply, expected: null },
 ];
 
 describe('simpleCalculator', () => {
-    testCases.forEach(({a, b, action, expected})=> {
+  testCases.forEach(({ a, b, action, expected }) => {
     test(`should ${a} ${action} ${b}`, () => {
-      const result = simpleCalculator({a,b,action})
-      expect(result).toEqual(expected)
-    })
-  })
+      const result = simpleCalculator({ a, b, action });
+      expect(result).toEqual(expected);
+    });
+  });
 });
