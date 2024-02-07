@@ -1,4 +1,3 @@
-// Uncomment the code below and write your tests
 import {
   throwError,
   throwCustomError,
@@ -6,8 +5,6 @@ import {
   MyAwesomeError,
   rejectCustomError,
 } from './index';
-
-// import {throwError, throwCustomError,resolveValue} from './index';
 
 describe('resolveValue', () => {
   test('should resolve provided value', async () => {
